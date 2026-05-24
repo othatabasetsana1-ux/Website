@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | Ngami Theatre Activists (N.T.A)</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+       <div class="container nav-container">
+      <a href="index.html" class="logo">
+        <img src="images/NTA Logo.png" alt="N.T.A Logo">
+        <span>N.T.A</span>
+            <div class="hamburger" id="hamburger">
+                <i class="ph ph-list"></i>
+            </div>
+            <nav>
+                <ul class="nav-menu" id="navMenu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="productions.html">Productions</a></li>
+                    <li><a href="events.html">Events</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="contact.html" class="active">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Contact Section -->
+        <section id="contact">
+            <div class="container">
+                <h2>Contact Us</h2>
+                <div class="contact-layout">
+                    
+                    <!-- Contact Info -->
+                    <div class="contact-info-box">
+                        <h3>Get in Touch</h3>
+                        <p>We want to hear from schools, NGOs, sponsors, and art lovers. Reach out to us!</p>
+                        
+                        <div class="info-row">
+                            <i class="ph ph-map-pin"></i>
+                            <div>
+                                <h4>Location</h4>
+                                <p>Maun, Ngamiland<br>Botswana</p>
+                            </div>
+                        </div>
+
+                        <div class="info-row">
+                            <i class="ph ph-envelope"></i>
+                            <div>
+                                <h4>Email</h4>
+                                <p>info@ngamitheatre.org</p>
+                            </div>
+                        </div>
+
+                        <div class="info-row">
+                            <i class="ph ph-phone"></i>
+                            <div>
+                                <h4>Phone</h4>
+                                <p>+267 75900518</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Contact Form with JS Validation -->
+                    <div class="contact-form">
+                        <h3>Send a Message</h3>
+                        <form id="ntaContactForm" onsubmit="return validateForm(event)">
+                            <div class="form-group">
+                                <label for="name">Name</label>
+                                <input type="text" id="name" class="form-control" placeholder="Your Full Name">
+                                <div class="error-msg" id="nameError">Please enter your name.</div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="email">Email Address</label>
+                                <input type="text" id="email" class="form-control" placeholder="yourname@example.com">
+                                <div class="error-msg" id="emailError">Please enter a valid email address.</div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="message">Message</label>
+                                <textarea id="message" rows="4" class="form-control" placeholder="How can we help?"></textarea>
+                                <div class="error-msg" id="messageError">Message cannot be empty.</div>
+                            </div>
+
+                            <button type="submit" class="btn" style="width: 100%;">Send Message</button>
+                        </form>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+    </main>
+
+        <!-- Footer -->
+    <footer>
+        <div class="container nav-container">
+      <a href="index.html" class="logo">
+        <img src="images/NTA Logo.png" alt="N.T.A Logo">
+        <span>N.T.A</span>
+                <!-- Links now trigger the modal functions -->
+                <a href="#" onclick="openModal('privacyModal'); return false;">Privacy Policy</a>
+                <a href="#" onclick="openModal('termsModal'); return false;">Terms of Service</a>
+            </div>
+            <div style="color: #666;">&copy; 2026 Ngami Theatre Activists. All Rights Reserved.</div>
+        </div>
+    </footer>
+        <!-- Hidden Privacy Policy Modal -->
+    <div id="privacyModal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal" onclick="closeModal('privacyModal')">&times;</span>
+            <h2>Privacy Policy</h2>
+            <p><strong>Last Updated: April 2026</strong></p>
+            <br>
+            <p>At Ngami Theatre Activists (N.T.A), one of our main priorities is the privacy of our visitors. This Privacy Policy document contains types of information that is collected and recorded by N.T.A and how we use it.</p>
+            
+            <h3>1. Information We Collect</h3>
+            <p>We collect information you provide directly to us when you fill out the contact form on our website. This includes:</p>
+            <ul>
+                <li>Name</li>
+                <li>Email Address</li>
+                <li>Message content</li>
+            </ul>
+
+            <h3>2. How We Use Your Information</h3>
+            <p>We use the information we collect to communicate with you regarding your inquiries, events, and membership opportunities. We do not sell, trade, or otherwise transfer your Personally Identifiable Information to outside parties.</p>
+
+            <h3>3. Cookies</h3>
+            <p>Our website does not use cookies to track personal data for marketing purposes. We may use cookies for basic website functionality (like remembering your preferences) to enhance your user experience.</p>
+
+            <h3>4. Contact Us</h3>
+            <p>If you have any questions about our Privacy Policy, please contact us at:</p>
+            <p>Email: info@ngamitheatre.org<br>Location: Maun, Ngamiland, Botswana</p>
+        </div>
+    </div>
+
+    <!-- Hidden Terms of Service Modal -->
+    <div id="termsModal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal" onclick="closeModal('termsModal')">&times;</span>
+            <h2>Terms of Service</h2>
+            <p><strong>Last Updated: April 2026</strong></p>
+            <br>
+            <p>Welcome to Ngami Theatre Activists (N.T.A). By accessing our website, you agree to be bound by these website Terms and Conditions of Use and all applicable laws and regulations.</p>
+
+            <h3>1. Use License</h3>
+            <p>Permission is granted to temporarily download one copy of the materials on N.T.A's website for personal, non-commercial transitory viewing only. This is the grant of a license, not a transfer of title, and under this license you may not:</p>
+            <ul>
+                <li>Modify or copy the materials</li>
+                <li>Use the materials for any commercial purpose or for any public display</li>
+                <li>Attempt to reverse engineer any software contained on the website</li>
+            </ul>
+
+            <h3>2. User Comments and Conduct</h3>
+            <p>If you send us creative ideas, suggestions, proposals, plans, or other materials, whether online, by email, by postal mail, or otherwise, you agree that we may, at any time, without restriction, edit, copy, publish, distribute, translate and otherwise use in any medium any comments that you forward to us.</p>
+            
+            <h3>3. Disclaimer</h3>
+            <p>The materials on N.T.A's website are provided on an 'as is' basis. N.T.A makes no warranties, expressed or implied, and hereby disclaims and negates all other warranties.</p>
+
+            <h3>4. Governing Law</h3>
+            <p>These terms and conditions are governed by and construed in accordance with the laws of Botswana.</p>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
