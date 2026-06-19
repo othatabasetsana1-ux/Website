@@ -462,3 +462,11 @@ main {
     flex: 1;
     padding-top: 100px;
 }
+.footer-links {
+    border: 2px solid red;   
+}
+
+.footer-links a {
+    color: yellow !important;  
+    font-size: 14px;
+}
