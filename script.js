@@ -1,25 +1,31 @@
+document.addEventListener('DOMContentLoaded', () => {
+    
+    const hamburger = document.getElementById('hamburger');
+    const navMenu = document.getElementById('navMenu');
 
-const hamburger = document.getElementById('hamburger');
-const navMenu = document.getElementById('navMenu');
+    if (hamburger && navMenu) {
 
-hamburger.addEventListener('click', () => {
-    navMenu.classList.toggle('active');
-    const icon = hamburger.querySelector('i');
-    if (navMenu.classList.contains('active')) {
-        icon.classList.replace('ph-list', 'ph-x');
-    } else {
-        icon.classList.replace('ph-x', 'ph-list');
+        hamburger.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+
+            const icon = hamburger.querySelector('i');
+
+            if (navMenu.classList.contains('active')) {
+                icon.classList.replace('ph-list', 'ph-x');
+            } else {
+                icon.classList.replace('ph-x', 'ph-list');
+            }
+        });
+
+        document.querySelectorAll('.nav-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                navMenu.classList.remove('active');
+                hamburger.querySelector('i').classList.replace('ph-x', 'ph-list');
+            });
+        });
     }
+
 });
-
-
-document.querySelectorAll('.nav-menu a').forEach(link => {
-    link.addEventListener('click', () => {
-        navMenu.classList.remove('active');
-        hamburger.querySelector('i').classList.replace('ph-x', 'ph-list');
-    });
-});
-
 
 function validateForm(event) {
     event.preventDefault();
@@ -59,7 +65,6 @@ function validateForm(event) {
     }
 }
 
-
 function openModal(id) {
     const modal = document.getElementById(id);
     if (modal) {
@@ -77,6 +82,7 @@ function closeModal(id) {
 
 window.onclick = function(event) {
     const modals = document.querySelectorAll('.modal');
+
     modals.forEach(modal => {
         if (event.target === modal) {
             modal.style.display = 'none';
