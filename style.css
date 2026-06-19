@@ -463,10 +463,14 @@ main {
     padding-top: 100px;
 }
 .footer-links {
-    border: 2px solid red;   
+    display: flex;
+    gap: 1.5rem;
 }
 
 .footer-links a {
-    color: yellow !important;  
-    font-size: 14px;
+    color: var(--text-muted);
+}
+
+.footer-links a:hover {
+    color: var(--accent-gold);
 }
