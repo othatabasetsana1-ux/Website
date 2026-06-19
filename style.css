@@ -30,15 +30,16 @@
 html {
     scroll-behavior: smooth;
 }
-
 body {
     font-family: var(--font-body);
     background-color: var(--bg-dark);
     color: var(--text-main);
     line-height: 1.6;
     overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
-
 a { text-decoration: none; color: inherit; transition: var(--transition); }
 ul { list-style: none; }
 img { max-width: 100%; display: block; border-radius: var(--border-radius); }
